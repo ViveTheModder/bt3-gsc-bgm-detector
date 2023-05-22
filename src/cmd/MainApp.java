@@ -73,6 +73,8 @@ public class MainApp
 		ArrayList<String> bgmNames = new ArrayList<String>();
 		
 		int pos=0, curr=0, gsacID = 0; short data, bgmCnt=0;
+		if (isInvalidGSC(gsc))
+			System.exit(1);	
 		
 		//traverse file until "01 05 0A 00" is found (responsible for starting battle params)
 		while (curr != 0x01050A00)
